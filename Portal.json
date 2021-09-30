@@ -1,0 +1,26 @@
+GET /ls
+Request: {}
+Response:{
+    "code": 0 / <error code>,
+    "error": "none" / "<error message>",
+    "files": [
+        {
+            "name": "<file name here>",
+            "size": <size in byte>,
+            "time": "<time in %hh:%mm %yyyy/%M/%d>"
+        },
+        {},
+        ....
+    ]
+}
+
+GET /download?name=<file name>
+Response: the file
+
+POST /upload
+name: uploadFile
+req: multipart/form-data
+res: {
+    "code": 0 / <error code>,
+    "message": "success" / "<error message>"
+}
